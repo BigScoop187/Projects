@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  #get 'demo/index'
+ 
+  #If nothing is found, it will just go to demo#index
+  root :to => "demo#index"
+  
+  #Should be the very last route if it is used. Can also take a (.:format) after :id. Allows to only select one file type
+  match ':controller(/:action(/:id))', :via => :get
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

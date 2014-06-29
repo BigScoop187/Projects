@@ -1,2 +1,32 @@
 <h1>Demo#hello</h1>
 <p>Hello, World!?</p>
+
+<%= 1 + 1 %>
+
+<br />
+
+<% target = "world" %>
+<%= "Hello #{target}" %>
+
+<%-# Changing to an array instance variable. This is like a foreach, where |n| is the item -%>
+<% @array.each do |n| %>
+
+    <%= n %><br />
+    
+<% end %>
+
+<br />
+
+<a href="/demo/index">Index Page 1</a><br />
+<%= link_to('Index page 2', {:controller => 'demo', :action => 'index'}) %>
+
+<br />
+
+ID: <%= params[:id] %> <br />
+ID: <%= @id %> <br />
+Page: <%= @page %> <br />
+Next Page: <%= @page + 1 %> <br />
+
+<hr />
+
+<%= params.inspect %>
